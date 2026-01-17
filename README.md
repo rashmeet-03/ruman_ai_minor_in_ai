@@ -3,6 +3,7 @@
   <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" alt="FastAPI">
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React">
   <img src="https://img.shields.io/badge/Google%20Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini">
+  <img src="https://img.shields.io/badge/Mistral%20AI-5E17EB?style=for-the-badge&logo=openai&logoColor=white" alt="Mistral">
 </p>
 
 <h1 align="center">RUMAN AI Learning Platform</h1>
@@ -19,13 +20,13 @@
 
 ## Overview
 
-**RUMAN AI** is a comprehensive learning management system that leverages cutting-edge AI/ML technologies to deliver personalized education experiences. The platform features RAG-powered AI chatbots, automated quiz generation, intelligent answer evaluation, and student performance prediction.
+**RUMAN AI** is a comprehensive learning management system that leverages cutting-edge AI/ML technologies to deliver personalized education experiences. The platform features RAG-powered AI chatbots (supporting **Gemini** and **Mistral**), automated quiz generation, intelligent answer evaluation, and student performance prediction.
 
 ### Key Features
 
 | Feature | Description |
 |---------|-------------|
-| **AI Chatbots** | RAG-powered tutors trained on course materials |
+| **Multi-LLM Chatbots** | RAG-powered tutors using **Gemini** or **Mistral** |
 | **Smart Quizzes** | AI-generated questions with automatic grading |
 | **Performance Prediction** | ML models to identify at-risk students |
 | **Learning Analytics** | Clustering to identify learning gaps |
@@ -40,9 +41,9 @@
 |     BACKEND      |       AI/ML       |       FRONTEND         |
 +------------------+-------------------+------------------------+
 | FastAPI          | Google Gemini API | React + Vite           |
-| SQLAlchemy       | Scikit-learn      | Axios                  |
-| SQLite           | ChromaDB          | Modern CSS             |
-| JWT Auth         | Sentence Trans.   | Responsive Design      |
+| SQLAlchemy       | Mistral AI        | Axios                  |
+| SQLite           | Scikit-learn      | Modern CSS             |
+| JWT Auth         | ChromaDB          | Responsive Design      |
 | bcrypt           | LangChain         |                        |
 +------------------+-------------------+------------------------+
 ```
@@ -55,12 +56,12 @@
 
 - Python 3.10 or higher
 - Node.js 18+ (for frontend)
-- Google Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
+- API Keys: Google Gemini and/or Mistral AI
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ruman-ai-learning-platform.git
+git clone https://github.com/rashmeet-03/ruman-ai-learning-platform.git
 cd ruman-ai-learning-platform
 ```
 
@@ -86,8 +87,9 @@ pip install -r requirements.txt
 copy .env.example .env   # Windows
 # cp .env.example .env   # macOS/Linux
 
-# Edit .env and add your API key:
-# GEMINI_API_KEY=your_api_key_here
+# Edit .env and add your API keys:
+# GEMINI_API_KEY=your_key
+# MISTRAL_API_KEY=your_key
 
 # Initialize database
 python init_db.py
@@ -129,16 +131,15 @@ The frontend will be available at: **http://localhost:5173**
 
 ## Jupyter Notebooks
 
-This project includes comprehensive Jupyter notebooks for demonstration and documentation:
+This project includes a comprehensive Jupyter notebook for demonstration and documentation:
 
-### Available Notebooks
+### Available Notebook
 
 | Notebook | Description |
 |----------|-------------|
-| `RUMAN_AI_Project_Notebook.ipynb` | **Main Project Notebook** - Complete demonstration with all 8 sections |
-| `RUMAN_AI_DEMONSTRATION.ipynb` | Extended demonstration with visualizations |
+| `RUMAN_AI_Project_Notebook.ipynb` | **Main Project Notebook** - Complete demonstration with 8 sections covering ML models, RAG system, and evaluation metrics |
 
-### Running the Notebooks
+### Running the Notebook
 
 #### Option 1: Using Jupyter Lab/Notebook
 
@@ -154,30 +155,21 @@ pip install jupyterlab
 jupyter lab
 ```
 
-Then navigate to the notebook file and open it.
-
 #### Option 2: Using VS Code
 
 1. Install the "Jupyter" extension in VS Code
 2. Open the `.ipynb` file
 3. Click "Run All" to execute all cells
 
-#### Option 3: Using Google Colab
-
-1. Go to [Google Colab](https://colab.research.google.com/)
-2. File > Upload notebook
-3. Select the `.ipynb` file
-4. Run all cells
-
 ### Notebook Contents
 
-The main notebook (`RUMAN_AI_Project_Notebook.ipynb`) covers:
+The notebook covers:
 
 1. **Problem Definition & Objective** - Educational challenges and project goals
 2. **Selected Project Track** - AI/ML techniques and technology stack
 3. **Data Understanding & Preparation** - Data generation and visualization
 4. **Model/System Design** - Architecture and ML model design
-5. **Core Implementation** - Random Forest, K-Means, RAG system, Answer evaluation
+5. **Core Implementation** - Random Forest, K-Means, RAG system (Gemini/Mistral), Answer evaluation
 6. **Evaluation & Analysis** - Performance metrics and results
 7. **Ethical Considerations** - Privacy, fairness, and responsible AI
 8. **Conclusion & Future Scope** - Summary and roadmap
@@ -211,7 +203,6 @@ ruman-ai-learning-platform/
 |-- docs/                    # API documentation
 |
 |-- RUMAN_AI_Project_Notebook.ipynb    # Main Jupyter notebook
-|-- RUMAN_AI_DEMONSTRATION.ipynb       # Extended demo notebook
 ```
 
 ---
@@ -239,11 +230,10 @@ For complete API documentation, visit: **http://localhost:8000/docs**
 
 ## AI/ML Features
 
-### 1. RAG Chatbot System
-- Document ingestion (PDF/TXT)
-- Semantic chunking and embedding
-- ChromaDB vector storage
-- Context-aware response generation
+### 1. Multi-LLM RAG Chatbot
+- **Providers:** Google Gemini & Mistral AI
+- **Context:** RAG-based context injection from course documents
+- **Vector DB:** ChromaDB for semantic search
 
 ### 2. Performance Prediction
 - Random Forest classifier
@@ -265,30 +255,3 @@ For complete API documentation, visit: **http://localhost:8000/docs**
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
----
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-- Google Gemini API for LLM capabilities
-- ChromaDB for vector storage
-- Sentence Transformers for embeddings
-- Scikit-learn for ML models
-
----
-
-<p align="center">
-  <strong>Built with AI for the Future of Education</strong>
-</p>
