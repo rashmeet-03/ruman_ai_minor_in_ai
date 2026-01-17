@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUMAN AI - Personalized Learning Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #0a0a0a; color: #fff; }
+        .slide {
+            width: 960px; height: 540px; margin: 40px auto;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            border-radius: 20px; padding: 50px; position: relative;
+            box-shadow: 0 25px 80px rgba(0,0,0,0.5);
+            page-break-after: always; overflow: hidden;
+        }
+        .slide::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+            background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+        }
+        .slide-number {
+            position: absolute; bottom: 20px; right: 30px;
+            font-size: 14px; color: rgba(255,255,255,0.4);
+        }
+        h1 { font-size: 42px; font-weight: 800; margin-bottom: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        h2 { font-size: 32px; font-weight: 700; margin-bottom: 25px; color: #f093fb; }
+        h3 { font-size: 22px; font-weight: 600; color: #667eea; margin: 15px 0 10px; }
+        p, li { font-size: 18px; line-height: 1.6; color: rgba(255,255,255,0.9); }
+        ul { padding-left: 25px; }
+        li { margin: 8px 0; }
+        .title-slide { text-align: center; display: flex; flex-direction: column;
+            justify-content: center; align-items: center; }
+        .title-slide h1 { font-size: 56px; margin-bottom: 15px; }
+        .subtitle { font-size: 24px; color: rgba(255,255,255,0.7); margin-bottom: 40px; }
+        .author { font-size: 20px; color: #667eea; margin-top: 30px; }
+        .mentor { font-size: 16px; color: rgba(255,255,255,0.5); margin-top: 10px; }
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .card {
+            background: rgba(255,255,255,0.05); border-radius: 12px;
+            padding: 20px; border: 1px solid rgba(255,255,255,0.1);
+        }
+        .highlight { color: #f093fb; font-weight: 600; }
+        .tag {
+            display: inline-block; background: rgba(102,126,234,0.2);
+            padding: 5px 12px; border-radius: 20px; font-size: 14px;
+            color: #667eea; margin: 3px;
+        }
+        .metric-box {
+            background: linear-gradient(135deg, rgba(102,126,234,0.2), rgba(118,75,162,0.2));
+            border-radius: 12px; padding: 20px; text-align: center; margin: 10px 0;
+        }
+        .metric-value { font-size: 36px; font-weight: 800; color: #667eea; }
+        .metric-label { font-size: 14px; color: rgba(255,255,255,0.6); }
+        .arch-box {
+            background: rgba(0,0,0,0.3); border-radius: 10px;
+            padding: 15px; margin: 8px 0; border-left: 3px solid #667eea;
+        }
+        .small { font-size: 14px; }
+        table { width: 100%; border-collapse: collapse; margin-top: 15px; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        th { color: #667eea; font-weight: 600; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        .icon { font-size: 28px; margin-bottom: 10px; }
+        @media print { .slide { page-break-after: always; margin: 0; } }
+    </style>
+</head>
+<body>
+
+<!-- SLIDE 1: Title -->
+<div class="slide title-slide">
+    <h1>🎓 RUMAN AI</h1>
+    <p class="subtitle">Personalized Learning Platform with AI-Powered Tutoring</p>
+    <div style="display: flex; gap: 10px; margin: 20px 0;">
+        <span class="tag">RAG Chatbot</span>
+        <span class="tag">ML Scoring</span>
+        <span class="tag">Performance Prediction</span>
+        <span class="tag">Gamification</span>
+    </div>
+    <p class="author">RASHMEET SINGH</p>
+    <p class="mentor">Mentor: Niranjan Deshpande | Module E - AI Project</p>
+    <div class="slide-number">1 / 10</div>
+</div>
+
+<!-- SLIDE 2: Problem Overview -->
+<div class="slide">
+    <h2>📋 Problem Overview</h2>
+    <div class="two-col">
+        <div>
+            <h3>Current Challenges</h3>
+            <ul>
+                <li><span class="highlight">One-size-fits-all</span> approach in traditional education</li>
+                <li>Teachers cannot provide personalized attention to <span class="highlight">30-50 students</span></li>
+                <li><span class="highlight">Manual grading</span> delays feedback significantly</li>
+                <li>Students can't get help <span class="highlight">outside classroom hours</span></li>
+                <li>No automated way to identify <span class="highlight">at-risk students</span></li>
+            </ul>
+        </div>
+        <div>
+            <h3>Our Solution: RUMAN AI</h3>
+            <div class="card">
+                <p>🤖 <strong>RAG-Based Q&A</strong> - Course-specific AI tutors</p>
+            </div>
+            <div class="card">
+                <p>📝 <strong>Automated Assessment</strong> - AI quiz generation & evaluation</p>
+            </div>
+            <div class="card">
+                <p>📊 <strong>Performance Prediction</strong> - ML-based risk classification</p>
+            </div>
+            <div class="card">
+                <p>🎮 <strong>Gamification</strong> - XP, levels, badges, streaks</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-number">2 / 10</div>
+</div>
+
+<!-- SLIDE 3: System Architecture -->
+<div class="slide">
+    <h2>🏗️ System Architecture</h2>
+    <div class="arch-box">
+        <strong style="color: #f093fb;">Frontend Layer</strong>
+        <p class="small">React 18 + Vite | Teacher Dashboard | Student Dashboard | Admin Panel</p>
+    </div>
+    <div style="text-align: center; color: #667eea; font-size: 24px;">↓ REST API ↓</div>
+    <div class="arch-box">
+        <strong style="color: #f093fb;">Backend Layer</strong>
+        <p class="small">FastAPI + SQLAlchemy | JWT Auth | Role-based Routes | bcrypt Security</p>
+    </div>
+    <div style="text-align: center; color: #667eea; font-size: 24px;">↓</div>
+    <div class="arch-box">
+        <strong style="color: #f093fb;">AI/ML Services</strong>
+        <p class="small">RAG System | Hybrid ML Scoring | Quiz Generator | Performance Predictor | Multi-LLM (Gemini/Mistral)</p>
+    </div>
+    <div style="text-align: center; color: #667eea; font-size: 24px;">↓</div>
+    <div class="arch-box">
+        <strong style="color: #f093fb;">Data Layer</strong>
+        <p class="small">SQLite (14 tables) | ChromaDB Vector Store | File Storage System</p>
+    </div>
+    <div class="slide-number">3 / 10</div>
+</div>
+
+<!-- SLIDE 4: AI/ML Models -->
+<div class="slide">
+    <h2>🧠 AI/ML Model Design</h2>
+    <div class="two-col">
+        <div>
+            <h3>1. RAG System Pipeline</h3>
+            <div class="card small">
+                <p>📄 Document Upload → Text Extraction (PyPDF2)</p>
+                <p>✂️ Chunking (512 chars, 50 overlap)</p>
+                <p>🔢 Embedding (all-MiniLM-L6-v2)</p>
+                <p>💾 Vector Storage (ChromaDB)</p>
+                <p>🔍 Retrieve top-5 chunks → LLM Response</p>
+            </div>
+            <h3 style="margin-top: 20px;">2. Hybrid ML Scoring</h3>
+            <div class="card small">
+                <p>• TF-IDF + Cosine Similarity: <span class="highlight">25%</span></p>
+                <p>• Sentence Transformers: <span class="highlight">50%</span></p>
+                <p>• Keyword Matching: <span class="highlight">25%</span></p>
+            </div>
+        </div>
+        <div>
+            <h3>3. Performance Prediction</h3>
+            <div class="card small">
+                <p><strong>Algorithm:</strong> Random Forest Classifier</p>
+                <p><strong>Features:</strong> quiz_avg, assignment_avg, quizzes_attempted, assignments_submitted, engagement_score</p>
+                <p><strong>Output:</strong> Risk Level (Low/Medium/High)</p>
+            </div>
+            <h3 style="margin-top: 20px;">4. Learning Gap Analysis</h3>
+            <div class="card small">
+                <p><strong>Algorithm:</strong> K-Means Clustering (k=3)</p>
+                <p><strong>Purpose:</strong> Groups students by performance patterns, identifies weak topics</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-number">4 / 10</div>
+</div>
+
+<!-- SLIDE 5: Technology Stack -->
+<div class="slide">
+    <h2>🛠️ Technology Stack</h2>
+    <div class="grid-3">
+        <div class="card" style="text-align: center;">
+            <div class="icon">⚛️</div>
+            <h3>Frontend</h3>
+            <p class="small">React 18, Vite, React Router, Axios, ReactMarkdown, KaTeX</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <div class="icon">⚡</div>
+            <h3>Backend</h3>
+            <p class="small">FastAPI, SQLAlchemy, SQLite, JWT Auth, bcrypt</p>
+        </div>
+        <div class="card" style="text-align: center;">
+            <div class="icon">🤖</div>
+            <h3>AI/ML</h3>
+            <p class="small">Gemini/Mistral APIs, ChromaDB, sentence-transformers, Scikit-learn</p>
+        </div>
+    </div>
+    <h3 style="margin-top: 30px;">Key Libraries & Tools</h3>
+    <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 15px;">
+        <span class="tag">PyPDF2</span>
+        <span class="tag">TF-IDF</span>
+        <span class="tag">Random Forest</span>
+        <span class="tag">K-Means</span>
+        <span class="tag">ChromaDB</span>
+        <span class="tag">all-MiniLM-L6-v2</span>
+        <span class="tag">Google Gemini</span>
+        <span class="tag">Mistral AI</span>
+    </div>
+    <div class="slide-number">5 / 10</div>
+</div>
+
+<!-- SLIDE 6: Demo - Teacher Dashboard -->
+<div class="slide">
+    <h2>🖥️ Demo: Teacher Dashboard</h2>
+    <div class="two-col">
+        <div>
+            <h3>Features</h3>
+            <ul>
+                <li>📚 <strong>Course Management</strong> - Create & manage courses</li>
+                <li>🤖 <strong>AI Chatbot Creator</strong> - Select LLM (Gemini/Mistral)</li>
+                <li>📄 <strong>Document Upload</strong> - PDF processing for RAG</li>
+                <li>📝 <strong>Quiz Builder</strong> - Manual + AI-generated quizzes</li>
+                <li>📊 <strong>Student Analytics</strong> - Performance tracking</li>
+                <li>⚠️ <strong>At-risk Detection</strong> - ML-powered alerts</li>
+            </ul>
+        </div>
+        <div>
+            <div class="card" style="background: rgba(0,0,0,0.4); height: 280px; display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center;">
+                    <p style="font-size: 48px;">👨‍🏫</p>
+                    <p style="color: rgba(255,255,255,0.5);">Teacher Dashboard Screenshot</p>
+                    <p class="small" style="color: #667eea; margin-top: 10px;">[Add your screenshot here in Google Slides]</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slide-number">6 / 10</div>
+</div>
+
+<!-- SLIDE 7: Demo - Student Dashboard -->
+<div class="slide">
+    <h2>🖥️ Demo: Student Dashboard</h2>
+    <div class="two-col">
+        <div>
+            <div class="card" style="background: rgba(0,0,0,0.4); height: 280px; display: flex; align-items: center; justify-content: center;">
+                <div style="text-align: center;">
+                    <p style="font-size: 48px;">👨‍🎓</p>
+                    <p style="color: rgba(255,255,255,0.5);">Student Dashboard Screenshot</p>
+                    <p class="small" style="color: #667eea; margin-top: 10px;">[Add your screenshot here in Google Slides]</p>
+                </div>
+            </div>
+        </div>
+        <div>
+            <h3>Features</h3>
+            <ul>
+                <li>📖 <strong>Course Enrollment</strong> - Browse & join courses</li>
+                <li>💬 <strong>AI Tutor Chat</strong> - Markdown & LaTeX support</li>
+                <li>⏱️ <strong>Quiz Taking</strong> - Timer-based assessments</li>
+                <li>📤 <strong>Assignment Submission</strong> - AI feedback</li>
+                <li>🏆 <strong>Gamification</strong> - XP, levels, badges, streaks</li>
+                <li>📈 <strong>Progress Tracking</strong> - Visual analytics</li>
+            </ul>
+        </div>
+    </div>
+    <div class="slide-number">7 / 10</div>
+</div>
+
+<!-- SLIDE 8: Results & Metrics -->
+<div class="slide">
+    <h2>📊 Results & Evaluation Metrics</h2>
+    <div class="grid-3" style="margin-bottom: 25px;">
+        <div class="metric-box">
+            <div class="metric-value">>80%</div>
+            <div class="metric-label">RAG Chunk Relevance</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-value">~85%</div>
+            <div class="metric-label">Hybrid Scorer Accuracy</div>
+        </div>
+        <div class="metric-box">
+            <div class="metric-value">~78%</div>
+            <div class="metric-label">Performance Predictor CV</div>
+        </div>
+    </div>
+    <div class="two-col">
+        <div>
+            <h3>Example RAG Response</h3>
+            <div class="card small" style="font-family: monospace;">
+                <p><strong>Q:</strong> "What is supervised learning?"</p>
+                <p><strong>A:</strong> Based on course materials, supervised learning is a type of ML where the model learns from labeled data with input features (X) and target labels (y).</p>
+            </div>
+        </div>
+        <div>
+            <h3>Example ML Scoring Output</h3>
+            <div class="card small" style="font-family: monospace;">
+                <p>Score: 1.8/2.0 (90%)</p>
+                <p>TF-IDF: 0.85 | Semantic: 0.92 | Keyword: 0.88</p>
+                <p>Feedback: "Excellent! Consider including: dimensionality"</p>
+            </div>
+        </div>
+    </div>
+    <div class="slide-number">8 / 10</div>
+</div>
+
+<!-- SLIDE 9: Key Learnings -->
+<div class="slide">
+    <h2>💡 Key Learnings</h2>
+    <div class="two-col">
+        <div>
+            <h3>Technical Insights</h3>
+            <ul>
+                <li><span class="highlight">512-token chunks</span> with 50-char overlap balance context vs. precision</li>
+                <li><span class="highlight">Hybrid scoring</span> (TF-IDF + Semantic + Keyword) more robust than single method</li>
+                <li><span class="highlight">Strict RAG</span> with relevance threshold prevents hallucination</li>
+                <li><span class="highlight">Provider abstraction</span> enables easy LLM switching (Gemini ↔ Mistral)</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Challenges & Solutions</h3>
+            <table class="small">
+                <tr><th>Challenge</th><th>Solution</th></tr>
+                <tr><td>LLM Hallucination</td><td>Strict RAG + relevance threshold</td></tr>
+                <tr><td>JSON Parsing</td><td>Cleanup markdown; fallback parsing</td></tr>
+                <tr><td>Model Loading</td><td>Lazy loading + singleton patterns</td></tr>
+            </table>
+        </div>
+    </div>
+    <h3 style="margin-top: 20px;">Limitations</h3>
+    <div style="display: flex; gap: 15px; margin-top: 10px;">
+        <span class="tag">Cold start: min 5 students for ML</span>
+        <span class="tag">Complex math PDFs extraction issues</span>
+        <span class="tag">English-optimized</span>
+        <span class="tag">LLM rate limits</span>
+    </div>
+    <div class="slide-number">9 / 10</div>
+</div>
+
+<!-- SLIDE 10: LLM Evaluation & Future -->
+<div class="slide">
+    <h2>🔮 LLM Evaluation & Future Scope</h2>
+    <div class="two-col">
+        <div>
+            <h3>LLM Provider Comparison</h3>
+            <table class="small">
+                <tr><th>Aspect</th><th>Gemini</th><th>Mistral</th></tr>
+                <tr><td>Response Quality</td><td>⭐⭐⭐⭐⭐</td><td>⭐⭐⭐⭐</td></tr>
+                <tr><td>Speed</td><td>Fast</td><td>Very Fast</td></tr>
+                <tr><td>Rate Limits</td><td>Moderate</td><td>Generous</td></tr>
+                <tr><td>JSON Handling</td><td>Good</td><td>Excellent</td></tr>
+            </table>
+            <h3 style="margin-top: 20px;">AI Tools Used</h3>
+            <ul class="small">
+                <li>GitHub Copilot - Code completion</li>
+                <li>Claude/ChatGPT - Debugging & docs</li>
+                <li>Gemini - Testing RAG prompts</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Future Improvements</h3>
+            <div class="card">
+                <p>🔔 <strong>Real-time Notifications</strong> - WebSocket integration</p>
+            </div>
+            <div class="card">
+                <p>📱 <strong>Mobile App</strong> - Cross-platform support</p>
+            </div>
+            <div class="card">
+                <p>🎬 <strong>Video Lectures</strong> - Multimedia support</p>
+            </div>
+            <div class="card">
+                <p>🌍 <strong>Multi-language</strong> - Hindi, regional languages</p>
+            </div>
+        </div>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <p style="font-size: 24px; color: #667eea;">Thank You! 🙏</p>
+    </div>
+    <div class="slide-number">10 / 10</div>
+</div>
+
+</body>
+</html>

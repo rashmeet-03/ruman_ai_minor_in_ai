@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+venv/
+myenv/
+env/
+.venv/
+ENV/
+
+# Environment variables & Secrets
+.env
+.env.local
+.env.*.local
+*.env
+CREDENTIALS.md
+*.pem
+*.key
+*.cert
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+ruman.db
+
+# ChromaDB (vector database - can be regenerated)
+chroma_db/
+
+# Uploads (user uploaded files)
+backend/uploads/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/
+
+# Test outputs
+test_plot.png
+test_notebook.py
+*_executed.ipynb
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+coverage.xml
+*.cover
+
+# Debug files
+debug_*.py
+fix_*.py
+revert_*.py

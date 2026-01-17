@@ -1,0 +1,12 @@
+--- Updating Chatbot Model ---
+Chatbot: math tutor
+Old Model: gemini-2.0-flash
+New Model: gemini-2.0-flash
+
+--- Reprocessing Documents ---
+Processing: jemh101.pdf
+   - Loaded text length: 15693
+   - Generated 85 chunks
+   - Generated 85 embeddings
+   - Stored 85 chunks in ChromaDB
+✅ DB Updated. Embeddings should be ready.
